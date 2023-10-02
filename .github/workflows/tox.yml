@@ -14,7 +14,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: pip install tox
-        run: TOXENV=py37 tox
       - if: matrix.python == '3.8'
         run: TOXENV=py38 tox
       - if: matrix.python == '3.9'
